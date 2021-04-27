@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CompanyApp">
-        <activity android:name=".RegisterActivity"></activity>
-
-        <activity android:name=".MainActivity"/>
-            <activity android:name=".LoginActivity">
+        <activity android:name=".FormActivity.DeSondossier"></activity>
+        <activity android:name=".FormActivity.PromoteurActivity" />
+        <activity android:name=".FormActivity.AgentImport" />
+        <activity android:name=".FormActivity.AgentCafore" />
+        <activity android:name=".RegisterActivity.RegisterActivity" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".RegisterActivity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
