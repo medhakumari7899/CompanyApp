@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f0ebef"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="@dimen/_1sdp"
+        app:civ_border_color="#000"
+        android:src="@drawable/ic_baseline_person_24"
+        android:id="@+id/CicImg"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="@dimen/_360sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:passwordToggleEnabled="true"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_below="@+id/CicImg"
+        android:background="@drawable/background_set"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/TIL"
+        />
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="wrap_content"
+        android:hint="Email"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_below="@+id/CicImg"
+        android:textSize="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_height="@dimen/_40sdp"/>
+
+</RelativeLayout>
