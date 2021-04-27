@@ -6,7 +6,7 @@
     android:background="#f0ebef"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity.LoginActivity">
+    >
 
 
     <de.hdodenhof.circleimageview.CircleImageView
