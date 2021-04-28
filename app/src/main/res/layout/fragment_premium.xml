@@ -586,7 +586,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="MARRIAGE PALACE"
+                            android:text="V I P Package"
                             android:textColor="#039de7"
                             android:textSize="@dimen/_20sdp"
                             android:textStyle="italic" />
