@@ -313,7 +313,7 @@
             <Button
                 android:layout_width="360dp"
                 android:background="@drawable/background_btn"
-                android:id="@+id/emp_register_btn"
+                android:id="@+id/btn_promoteur"
                 android:text="Submit"
                 android:textSize="@dimen/_15sdp"
                 android:layout_marginLeft="@dimen/_20sdp"
