@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.companyapp.R;
+
 public class AgentCafore extends AppCompatActivity {
 
     @Override
