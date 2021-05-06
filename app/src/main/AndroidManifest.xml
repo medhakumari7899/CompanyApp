@@ -9,22 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CompanyApp">
+        <activity android:name=".UserDetailsForm.DataCollectForms2"></activity>
+        <activity android:name=".UserDetailsForm.DataCollectForms" />
+        <activity android:name=".UserDetailsForm.BusinessRelatedData1" />
+        <activity android:name=".Premium.Vip_Package" />
+        <activity android:name=".Premium.Advance_Package" />
+        <activity android:name=".Premium.Basic_Package" />
         <activity android:name=".Activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
         </activity>
         <activity android:name=".FormActivity.DeSondossier" />
         <activity android:name=".FormActivity.PromoteurActivity" />
         <activity android:name=".FormActivity.AgentImport" />
         <activity android:name=".FormActivity.AgentCafore" />
-        <activity android:name=".RegisterActivity.LoginActivity">
-
-        </activity>
+        <activity android:name=".RegisterActivity.LoginActivity" />
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
