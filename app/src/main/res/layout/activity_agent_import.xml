@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/ic_splash"
     android:layout_height="match_parent"
-   >
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,14 +26,12 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 android:layout_marginStart="@dimen/_20sdp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/_15sdp"
-                android:padding="@dimen/_5sdp"
-                android:textColor="#000"
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
                 android:layout_centerHorizontal="true"
-                android:text="Promoteur"/>
+                android:id="@+id/p_image"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/ic_profile"/>
         </RelativeLayout>
 
 
@@ -41,289 +40,147 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Direction Generale des Impots"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_firstname"
+                android:hint="Date"
+                android:id="@+id/Date"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Direction de reattachement"
-                android:fontFamily="@font/lateefregular"
-                android:textColor="#000"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_lastname"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nom et Prenoms du Promoteur"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_currenycity"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nom de Pentreprise"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_postalcode"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Reference cadastrales"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:fontFamily="@font/antonio"
-                android:padding="@dimen/_5sdp"
-                android:textSize="@dimen/_15sdp"
-                android:gravity="center"
-                android:textColor="#2196F3"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Secteur"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_emailaddress"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sections "
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_skypelinkedin"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Lot"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_highestqualification"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Parcelle"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_university"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="N de rue"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_passingyear"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_jobtitl"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="N de porte"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_25sdp"
-                android:textSize="@dimen/_13sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_toatalyearofexperince"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Date"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_jobtitle"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-
-            <Button
-                android:layout_width="360dp"
-                android:background="@drawable/background_btn"
-                android:id="@+id/btn_agentimport"
-                android:text="Submit"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:textColor="#FFF"
-                android:textAllCaps="false"
-                android:layout_marginTop="@dimen/_25sdp"
-                android:layout_marginBottom="30dp"
-                android:padding="@dimen/_7sdp"
-                android:layout_height="52dp"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Nom commercial de I'enterprise"
+                android:id="@+id/Nom_commercial_de_i_enterprise"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Single(facultatif)"
+                android:id="@+id/Single_facultatif"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Activities menees"
+                android:id="@+id/Activities_menees"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Principle"
+                android:id="@+id/principle"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Secondaire(facultatif)"
+                android:id="@+id/secondaire_facultatif"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Address"
+                android:id="@+id/Address"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#3894a5"
+            android:id="@+id/step2"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:text="Step:2"
+            />
+
+
+
     </LinearLayout>
 </ScrollView>

@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/ic_splash"
     android:layout_height="match_parent"
     >
 
@@ -25,14 +26,12 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"
                 android:layout_marginStart="@dimen/_20sdp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/_15sdp"
-                android:padding="@dimen/_5sdp"
-                android:textColor="#000"
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
                 android:layout_centerHorizontal="true"
-                android:text="Agent Cafore"/>
+                android:id="@+id/p_image"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/ic_profile"/>
         </RelativeLayout>
 
 
@@ -41,306 +40,128 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nom commercial de i' enterprise"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_firstname"
+                android:hint="Nombre d'employees prevus"
+                android:id="@+id/Nombred_employees_prevus"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sigle(facultatif)"
-                android:fontFamily="@font/lateefregular"
-                android:textColor="#000"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_lastname"
+                android:hint="Transport"
+                android:id="@+id/Transport"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Activities menees"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_currenycity"
+                android:hint="BTP"
+                android:id="@+id/btp"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Adresse:"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_postalcode"
+                android:hint="Commerce"
+                android:id="@+id/Commerce"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Secteur:"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:orientation="vertical"
-               android:layout_height="wrap_content">
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:textColor="#000"
-                   android:layout_marginLeft="@dimen/_20sdp"
-                   android:id="@+id/txt_Ancien"
-                   android:layout_marginTop="@dimen/_10sdp"
-                   android:fontFamily="@font/lateefregular"
-                   android:textSize="@dimen/_15sdp"
-                   android:layout_height="wrap_content"
-                   android:text="Ancien:">
-
-               </TextView>
-
-               <EditText
-                   android:layout_width="match_parent"
-                   android:layout_marginLeft="@dimen/_5sdp"
-                   android:id="@+id/Et_Ancien"
-                   android:layout_marginRight="@dimen/_20sdp"
-                   android:layout_toRightOf="@+id/txt_Ancien"
-                   android:layout_height="wrap_content"/>
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_weight="1"
-                   android:textColor="#000"
-                   android:layout_below="@+id/txt_Ancien"
-                   android:layout_marginLeft="@dimen/_20sdp"
-                   android:id="@+id/txt_Nouveau"
-                   android:fontFamily="@font/lateefregular"
-                   android:textSize="@dimen/_15sdp"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/_20sdp"
-                   android:text="Nouveau:">
-
-               </TextView>
-
-               <EditText
-                   android:layout_width="match_parent"
-                   android:layout_marginLeft="@dimen/_5sdp"
-                   android:layout_marginRight="@dimen/_20sdp"
-                   android:layout_marginTop="@dimen/_40sdp"
-                   android:layout_toRightOf="@+id/txt_Nouveau"
-                   android:layout_height="wrap_content"/>
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_weight="1"
-                   android:textColor="#000"
-                   android:layout_below="@+id/txt_Nouveau"
-                   android:layout_marginLeft="@dimen/_20sdp"
-                   android:id="@+id/txt_BoitePostale"
-                   android:fontFamily="@font/lateefregular"
-                   android:textSize="@dimen/_15sdp"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/_20sdp"
-                   android:text="Boite Postale">
-
-               </TextView>
-
-               <EditText
-                   android:layout_width="match_parent"
-                   android:layout_marginLeft="@dimen/_5sdp"
-                   android:layout_marginRight="@dimen/_20sdp"
-                   android:layout_below="@id/txt_Nouveau"
-                   android:layout_marginTop="@dimen/_10sdp"
-                   android:layout_toRightOf="@+id/txt_BoitePostale"
-                   android:layout_height="wrap_content"/>
-
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:textColor="#000"
-                   android:layout_below="@+id/txt_BoitePostale"
-                   android:layout_marginLeft="@dimen/_20sdp"
-                   android:id="@+id/txt_Telephone"
-                   android:fontFamily="@font/lateefregular"
-                   android:textSize="@dimen/_15sdp"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="@dimen/_20sdp"
-                   android:text="Telephone">
-
-               </TextView>
-
-               <EditText
-                   android:layout_width="match_parent"
-                   android:layout_marginLeft="@dimen/_5sdp"
-                   android:layout_marginRight="@dimen/_20sdp"
-                   android:layout_below="@id/txt_BoitePostale"
-                   android:layout_marginTop="@dimen/_10sdp"
-                   android:layout_toRightOf="@+id/txt_Telephone"
-                   android:layout_height="wrap_content"/>
-
-           </RelativeLayout>
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Chiffre d'affaires annuel previsionnel"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_emailaddress"
+                android:hint="SCRM"
+                android:id="@+id/Scrm"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Nombre d'employes prevus "
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
+                android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_skypelinkedin"
+                android:hint="Autres a preciser"
+                android:id="@+id/Autresa_preciser"
                 android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#3894a5"
+            android:id="@+id/submite"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:text="Submite"
+            />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Renseignement sur la possession de'une enterprise existante :"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_highestqualification"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Persionne physique"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_university"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Personne ,moral"
-                android:textColor="#000"
-                android:fontFamily="@font/lateefregular"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:textSize="@dimen/_15sdp"
-                android:layout_marginLeft="@dimen/_20sdp"/>
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="360dp"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/background_set"
-                android:padding="@dimen/_10sdp"
-                android:id="@+id/emp_passingyear"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
-                android:layout_height="52dp"/>
 
-    </LinearLayout>
+
     </LinearLayout>
 </ScrollView>

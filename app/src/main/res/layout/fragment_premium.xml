@@ -1,835 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:fillViewport="true"
+    android:orientation="vertical"
+    android:background="@drawable/ic_splash"
     android:layout_height="match_parent">
-
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:background="#039de7"
-        >
+    <ImageView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/ic_profile"
+        android:id="@+id/Pre_img"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/purple_200"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_gravity="center">
+        <RelativeLayout
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_130sdp">
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:src="@drawable/ic_profile"
+                android:id="@+id/Pre_imge"
+                android:background="@drawable/pre_background"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_80sdp"
+                 />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Upgrade to Premium"
-            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/Pre_Basic_Package"
+            android:layout_toRightOf="@+id/Pre_imge"
+            android:textColor="#FFF"
+            android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
-            android:gravity="left"
-            android:textColor="@color/white"/>
-
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:layout_marginTop="@dimen/_140sdp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:text="Paquet de base \n $29"/>
+       <androidx.cardview.widget.CardView
+           android:layout_width="@dimen/_120sdp"
+           android:elevation="@dimen/_5sdp"
+           app:cardCornerRadius="@dimen/_10sdp"
+           android:layout_marginLeft="@dimen/_150sdp"
+           android:layout_below="@+id/Pre_Basic_Package"
+           android:layout_marginTop="@dimen/_25sdp"
+           android:layout_height="@dimen/_30sdp">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="achat"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="normal"
+            android:textColor="#3894a5"/>
+       </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/purple_200"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_gravity="center">
+        <RelativeLayout
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_130sdp">
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:src="@drawable/ic_profile"
+                android:id="@+id/Pre_imge"
+                android:background="@drawable/pre_background"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_80sdp"
+                />
 
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_300sdp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_40sdp"
-                android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="#ffffff"
-                android:padding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Pre_forfait_àlavance"
+                android:layout_toRightOf="@+id/Pre_imge"
+                android:textColor="#FFF"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:text="forfait à l'avance \n $65"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_120sdp"
+                android:elevation="@dimen/_5sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_8sdp">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/_25sdp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Basic Package"
-                            android:textColor="#039de7"
-                            android:textSize="@dimen/_20sdp"
-                            android:textStyle="italic" />
-
-                        <ImageView
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_25sdp"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="@dimen/_20sdp"
-                            android:layout_marginTop="@dimen/_25sdp"
-                            app:srcCompat="@drawable/ic_basicpackage"
-                            tools:ignore="VectorDrawableCompat" />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:gravity="left"
-                        android:text="Package Valid For 1 Month"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="italic" />
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:gravity="center"
-                        android:text="Price - 2000/-"
-                        android:textColor="#039de7"
-                        android:textSize="@dimen/_17sdp"
-                        android:textStyle="bold" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:textAlignment="textEnd"
-                            app:srcCompat="@drawable/ic_rightarrow"
-                            app:tint="#4CAF50"
-                            android:gravity="end"
-                            tools:ignore="VectorDrawableCompat" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Documented generated based on data provided:"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:src="@drawable/ic_rightarrow"
-                            app:tint="#4CAF50" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Storage Facility(Google Drive)/- :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                           android:src="@drawable/ic_closearrow"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Incorporation Service:"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:textAlignment="textEnd"
-                            android:src="@drawable/ic_closearrow"
-                            app:tint="#ff0000"
-                            android:gravity="end" />
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Company House issued documents :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_3sdp"
-                            android:textAlignment="textEnd"
-                            android:src="@drawable/ic_closearrow"
-                            android:gravity="end" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Business Stamp for the company newly formed  :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:src="@drawable/ic_closearrow"
-                            app:tint="#ff0000" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Concierge Service for additional document gathering :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-                    <Button
-
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:background="@drawable/background_btn"
-                        android:text="Buy Now"
-                        android:textColor="#ffffff" />
-
-
-
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_300sdp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="#ffffff"
-                android:layout_marginLeft="@dimen/_40sdp"
-                app:cardElevation="@dimen/_10sdp"
-                app:cardCornerRadius="@dimen/_10sdp">
-
-
-                <LinearLayout
+                android:layout_marginLeft="@dimen/_150sdp"
+                android:layout_below="@+id/Pre_forfait_àlavance"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_height="@dimen/_30sdp">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="achat"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/_25sdp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="Advanced Package"
-                            android:textColor="#039de7"
-                            android:textSize="@dimen/_20sdp"
-                            android:textStyle="italic" />
-
-
-                        <ImageView
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_25sdp"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="@dimen/_20sdp"
-                            android:layout_marginTop="@dimen/_25sdp"
-                            android:src="@drawable/ic_premium"
-
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:gravity="left"
-                        android:text="Package Valid For 3 Month"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="italic" />
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:gravity="center"
-                        android:text="Price - 3500/-"
-                        android:textColor="#039de7"
-                        android:textSize="@dimen/_17sdp"
-                        android:textStyle="bold" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:textAlignment="textEnd"
-                            app:srcCompat="@drawable/ic_rightarrow"
-                            app:tint="#4CAF50"
-                            android:gravity="end"
-                            tools:ignore="VectorDrawableCompat" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Documented generated based on data provided:"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:src="@drawable/ic_rightarrow"
-                            app:tint="#4CAF50" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Storage Facility(Google Drive)/- :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                           android:src="@drawable/ic_rightarrow"
-
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Incorporation Service:"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:textAlignment="textEnd"
-                           android:src="@drawable/ic_rightarrow"
-                            android:gravity="end" />
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Company House issued documents :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_3sdp"
-                            android:textAlignment="textEnd"
-                            android:src="@drawable/ic_rightarrow"
-                            android:gravity="end" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Business Stamp for the company newly formed  :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                           android:src="@drawable/ic_closearrow"
-                            app:tint="#ff0000" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Concierge Service for additional document gathering :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-                    <Button
-                        android:id="@+id/banquet_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:background="@drawable/background_btn"
-                        android:text="Buy Now"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
-
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="normal"
+                    android:textColor="#3894a5"/>
             </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/purple_200"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_gravity="center">
+        <RelativeLayout
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_130sdp">
+            <ImageView
+                android:layout_width="@dimen/_80sdp"
+                android:src="@drawable/ic_profile"
+                android:id="@+id/Pre_imge"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:background="@drawable/pre_background"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="@dimen/_80sdp"
+                />
 
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="@dimen/_300sdp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                app:cardBackgroundColor="#ffffff"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/Pre_forfait_vip"
+                android:layout_toRightOf="@+id/Pre_imge"
+                android:textColor="#FFF"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_50sdp"
+                android:text="forfait vip \n $98"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_120sdp"
+                android:elevation="@dimen/_5sdp"
                 app:cardCornerRadius="@dimen/_10sdp"
-                app:cardElevation="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_40sdp"
-                android:layout_marginRight="@dimen/_8sdp">
-
-
-                <LinearLayout
+                android:layout_marginLeft="@dimen/_150sdp"
+                android:layout_below="@+id/Pre_forfait_vip"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_height="@dimen/_30sdp">
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="achat"
                     android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:padding="@dimen/_25sdp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="V I P Package"
-                            android:textColor="#039de7"
-                            android:textSize="@dimen/_20sdp"
-                            android:textStyle="italic" />
-
-
-                        <ImageView
-                            android:layout_width="@dimen/_30sdp"
-                            android:layout_height="@dimen/_25sdp"
-                            android:layout_gravity="right"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginTop="@dimen/_25sdp"
-                            android:src="@drawable/ic_vip"
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:gravity="left"
-                        android:text="Package Valid For 6 Month"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="italic" />
-
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/_5sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:gravity="center"
-                        android:text="Price - 5000/-"
-                        android:textColor="#039de7"
-                        android:textSize="@dimen/_17sdp"
-                        android:textStyle="bold" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:textAlignment="textEnd"
-                            app:srcCompat="@drawable/ic_rightarrow"
-                            app:tint="#4CAF50"
-                            android:gravity="end"
-                            tools:ignore="VectorDrawableCompat" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Documented generated based on data provided:"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:src="@drawable/ic_rightarrow"
-                            app:tint="#4CAF50" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Storage Facility(Google Drive)/- :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:src="@drawable/ic_rightarrow"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Incorporation Service:"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:textAlignment="textEnd"
-                            android:src="@drawable/ic_rightarrow"
-                            android:gravity="end" />
-
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Company House issued documents :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_3sdp"
-                            android:textAlignment="textEnd"
-                            android:src="@drawable/ic_rightarrow"
-                            android:gravity="end" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Business Stamp for the company newly formed  :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginRight="@dimen/_2sdp"
-                            android:src="@drawable/ic_rightarrow"
-                             />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="@dimen/_5sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:gravity="left"
-                            android:text="*Concierge Service for additional document gathering :"
-                            android:textSize="@dimen/_12sdp" />
-
-
-
-                    </LinearLayout>
-
-
-
-
-
-
-                    <Button
-
-                        android:id="@+id/marriage_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_35sdp"
-                        android:layout_marginTop="@dimen/_15sdp"
-                        android:background="@drawable/background_btn"
-                        android:text="Buy Now"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
-
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="normal"
+                    android:textColor="#3894a5"/>
             </androidx.cardview.widget.CardView>
-
-            <Button
-
-                android:id="@+id/guest_btn"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_35sdp"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:background="@drawable/background_btn"
-                android:text="Buy Now"
-                android:textColor="#ffffff" />
-        </LinearLayout>
-
-    </HorizontalScrollView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 
-</RelativeLayout>
+    <!--    <Button-->
+<!--        android:id="@+id/marriage_btn"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="@dimen/_35sdp"-->
+<!--                        android:layout_marginTop="@dimen/_15sdp"-->
+<!--                        android:background="@drawable/background_btn"-->
+<!--                        android:text="Buy Now"-->
+<!--                        android:textColor="#ffffff" />-->
+
+
+</LinearLayout>
 
 

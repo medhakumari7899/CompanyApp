@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0D47A1"
+        android:background="#039de7"
 
         android:orientation="horizontal">
 
@@ -39,7 +39,7 @@
                 android:id="@+id/tv_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/lateefregular"
                 android:text="Name"
                 android:textColor="#FFFFFF"
                 android:textSize="@dimen/_20sdp"
@@ -125,7 +125,7 @@
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_4sdp"
                 app:srcCompat="@drawable/ic_baseline_group_24"
-                app:tint="#0D47A1" />
+                app:tint="#039de7" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -133,12 +133,12 @@
                 android:layout_gravity="center"
                 android:gravity="left"
                 android:paddingLeft="@dimen/_10sdp"
-                android:text="Invite friends to Immigration Adda"
+                android:text="Invite friends to company"
                 android:textSize="@dimen/_12sdp"
                 android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#0D47A1"
+                android:drawableTint="#039de7"
                 android:drawablePadding="@dimen/_10sdp"
-                android:textColor="#0D47A1" />
+                android:textColor="#039de7" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -166,17 +166,17 @@
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_4sdp"
                 app:srcCompat="@drawable/ic_baseline_edit_24"
-                app:tint="#0D47A1" />
+                app:tint="#039de7" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#0D47A1"
+                android:drawableTint="#039de7"
                 android:gravity="left"
                 android:paddingLeft="@dimen/_10sdp"
-                android:textColor="#0D47A1"
+                android:textColor="#039de7"
                 android:textSize="@dimen/_12sdp"
                 android:text="Edit Profile"/>
         </LinearLayout>
@@ -206,16 +206,16 @@
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_4sdp"
                 app:srcCompat="@drawable/ic_help"
-                app:tint="#0D47A1"/>
+                app:tint="#039de7"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#0D47A1"
+                android:drawableTint="#039de7"
                 android:gravity="left"
                 android:paddingLeft="10dp"
-                android:textColor="#0D47A1"
+                android:textColor="#039de7"
                 android:textSize="@dimen/_12sdp"
                 android:text="Help and Support" />
         </LinearLayout>
@@ -231,35 +231,8 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:padding="@dimen/_15sdp"
         app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff">
+        app:cardBackgroundColor="#fff"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_4sdp"
-                app:srcCompat="@drawable/ic_policy"
-                app:tint="#0D47A1" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="left"
-                android:paddingLeft="@dimen/_10sdp"
-                android:text="Privacy Policy"
-                android:textSize="@dimen/_12sdp"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#0D47A1"
-                android:textColor="#0D47A1" />
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/set_changepass"
@@ -284,8 +257,8 @@
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_4sdp"
-                app:srcCompat="@drawable/ic_baseline_vpn_key_24"
-                app:tint="#0D47A1" />
+                android:src="@drawable/ic_baseline_vpn_key_24"
+                app:tint="#039de7" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -295,8 +268,8 @@
                 android:text="Change Password"
                 android:textSize="@dimen/_12sdp"
                 android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#0D47A1"
-                android:textColor="#0D47A1" />
+                android:drawableTint="#039de7"
+                android:textColor="#039de7" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -323,8 +296,8 @@
                 android:layout_marginBottom="@dimen/_5sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginLeft="@dimen/_4sdp"
-                app:srcCompat="@drawable/ic_logout"
-                app:tint="#0D47A1" />
+                android:src="@drawable/ic_logout"
+                app:tint="#039de7" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -334,8 +307,8 @@
                 android:text="Logout"
                 android:textSize="@dimen/_12sdp"
                 android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#0D47A1"
-                android:textColor="#0D47A1" />
+                android:drawableTint="#039de7"
+                android:textColor="#039de7" />
 
 
 
