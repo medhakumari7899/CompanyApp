@@ -53,7 +53,7 @@
                 android:textSize="@dimen/_20sdp"
                 android:fontFamily="@font/lateefregular"
                 android:textStyle="bold"
-                android:textColor="#3894a5"
+                android:textColor="#ff8f47"
                 />
             <TextView
                 android:layout_width="match_parent"

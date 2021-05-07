@@ -33,7 +33,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="@dimen/_30sdp"
-            android:textColor="#039de7"
+            android:textColor="#ff8f47"
             >
 
         </TextView>
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
             android:gravity="center"
-            android:textColor="#0D47A1"
+            android:textColor="#ff8f47"
             android:textSize="@dimen/_10sdp"
             android:text="loading...\nPlease Wait"/>
 

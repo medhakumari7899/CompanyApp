@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Données personnelles"
-            android:textColor="#3894a5"
+            android:textColor="#ff8f47"
             android:gravity="center"
             android:textSize="@dimen/_15sdp"
             />
@@ -220,7 +220,7 @@
             android:layout_marginLeft="@dimen/_25sdp"
             android:layout_marginBottom="@dimen/_25sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:background="#3894a5"
+            android:background="#ff8f47"
             android:id="@+id/step2"
             android:layout_marginRight="@dimen/_25sdp"
             android:text="Next"

@@ -33,13 +33,13 @@
                 android:layout_height="@dimen/_150sdp"
                 android:src="@drawable/ic_profile"/>
         </RelativeLayout>
-       <TextView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Description de I'enterprise"
+            android:text="Structure du capital"
             android:textColor="#ff8f47"
             android:gravity="center"
-             android:textSize="@dimen/_15sdp"
+            android:textSize="@dimen/_15sdp"
             />
 
 
@@ -54,7 +54,7 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Nom de l'entreprise"
+                android:hint="Nombre de parts sociale"
                 android:id="@+id/Date"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -73,7 +73,7 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Nom commercial"
+                android:hint="Valeur nominale d'une part sociale"
                 android:id="@+id/Nom_commercial_de_i_enterprise"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -92,7 +92,7 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Nom abrege ou acronyme"
+                android:hint="Capital social"
                 android:id="@+id/Single_facultatif"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -100,14 +100,7 @@
                 android:textColorHint="#7C6A6A"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Business Activity"
-            android:textColor="#ff8f47"
-            android:gravity="center"
-            android:textSize="@dimen/_15sdp"
-            />
+       
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -208,6 +201,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginRight="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_weight="1"
                 android:background="#3894a5"

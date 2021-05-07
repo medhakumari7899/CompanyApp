@@ -26,7 +26,7 @@
       android:fillColor="#fff"/>
   <path
       android:pathData="M100.537,114.016h61.715v14.892h-61.715z"
-      android:fillColor="#6c63ff"/>
+      android:fillColor="#FFB300"/>
   <path
       android:pathData="M97.599,178.009h67.592v14.892h-67.592z"
       android:fillColor="#e5e5e5"/>
@@ -66,7 +66,7 @@
       android:fillAlpha="0.2"/>
   <path
       android:pathData="M131.471,342.175m-43.23,0a43.23,43.23 0,1 1,86.46 0a43.23,43.23 0,1 1,-86.46 0"
-      android:fillColor="#6c63ff"/>
+      android:fillColor="#FFB300"/>
   <path
       android:pathData="M127.351,360.424l-12.938,-16.637l7.524,-5.852l6.126,7.877l20.697,-21.848l6.921,6.557l-28.33,29.903z"
       android:fillColor="#fff"/>
