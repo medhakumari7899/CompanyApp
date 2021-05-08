@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+
     compileSdkVersion 30
     lintOptions {
         checkReleaseBuilds false
@@ -34,7 +35,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    buildFeatures
+            {
+                dataBinding=true
+    }
+
 }
+
 
 dependencies {
 
@@ -52,6 +59,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
-    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
 }

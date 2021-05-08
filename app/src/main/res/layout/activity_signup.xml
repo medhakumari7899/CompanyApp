@@ -26,7 +26,24 @@
             android:background="@drawable/rectangle_2"
             android:padding="@dimen/_10sdp"
             android:textStyle="normal"
-            android:id="@+id/L_Email"
+            android:id="@+id/S_Nom_d_utilisateur"
+            android:textSize="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="#7C6A6A"
+            android:textColorHint="#7C6A6A"
+            android:hint="Nom d'utilisateur"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/S_Nom_d_utilisateur"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:fontFamily="@font/lateefregular"
+            android:background="@drawable/rectangle_2"
+            android:padding="@dimen/_10sdp"
+            android:textStyle="normal"
+            android:id="@+id/S_Email"
             android:textSize="@dimen/_18sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:textColor="#7C6A6A"
@@ -36,31 +53,14 @@
             android:layout_height="wrap_content"/>
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="wrap_content"
-            android:layout_below="@+id/L_Email"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_20sdp"
-            android:fontFamily="@font/lateefregular"
-            android:background="@drawable/rectangle_2"
-            android:padding="@dimen/_10sdp"
-            android:textStyle="normal"
-            android:id="@+id/L_Emai"
-            android:textSize="@dimen/_18sdp"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:textColor="#7C6A6A"
-            android:textColorHint="#7C6A6A"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress"
-            android:layout_height="wrap_content"/>
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/L_Emai"
+            android:layout_below="@+id/S_Email"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_20sdp"
             android:background="@drawable/rectangle_2"
             android:fontFamily="@font/lateefregular"
             android:padding="@dimen/_10sdp"
             android:textStyle="normal"
-            android:id="@+id/L_Mot_de_passe"
+            android:id="@+id/S_Mot_de_passe"
             android:textSize="@dimen/_18sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:textColor="#7C6A6A"
@@ -68,26 +68,7 @@
             android:hint="Mot de passe"
             android:inputType="textPassword"
             android:layout_height="wrap_content"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:id="@+id/linear"
-            android:layout_below="@+id/L_Mot_de_passe"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/lateefregular"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold"
-                android:textColor="#039de7"
-                android:id="@+id/forgotpassword"
-                android:layout_marginEnd="@dimen/_15sdp"
-                android:layout_marginStart="@dimen/_15sdp"
-                android:padding="@dimen/_5sdp"
-                android:layout_gravity="right"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
         <androidx.cardview.widget.CardView
             android:layout_width="360dp"
             android:layout_height="52dp"
@@ -96,13 +77,13 @@
             android:layout_marginRight="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
             app:cardBackgroundColor="@color/purple_200"
-            android:layout_below="@id/L_Mot_de_passe"
-            android:id="@+id/L_connexion">
+            android:layout_below="@id/S_Mot_de_passe"
+            android:id="@+id/S_cardView">
             <TextView
                 android:layout_width="wrap_content"
-                android:text="connexion"
+                android:text="S'inscrire"
                 android:layout_gravity="center"
-                android:id="@+id/tvLogin"
+                android:id="@+id/S_Sinscrire"
                 android:textStyle="bold"
                 android:padding="@dimen/_5sdp"
                 android:textSize="@dimen/_15sdp"
@@ -116,14 +97,14 @@
             android:layout_width="match_parent"
             android:id="@+id/linear1"
             android:layout_marginTop="@dimen/_25sdp"
-            android:layout_below="@+id/L_connexion"
+            android:layout_below="@+id/S_cardView"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Je n'ai pas de compte"
+                android:text="Vous avez déjà un compte"
                 android:textSize="@dimen/_15sdp"
                 android:fontFamily="@font/lateefregular"
                 android:textStyle="bold"
@@ -134,11 +115,11 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="S'inscrire"
+                android:text="Connexion"
                 android:fontFamily="@font/lateefregular"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold"
-                android:id="@+id/txt_register"
+                android:id="@+id/S_Connexion"
                 android:layout_toRightOf="@+id/arhacc"
                 android:textColor="#ff8f47"
                 android:padding="@dimen/_5sdp"
