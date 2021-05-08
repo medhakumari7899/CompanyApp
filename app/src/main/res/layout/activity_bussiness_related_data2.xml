@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/p_image"
                 android:layout_height="@dimen/_150sdp"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/bussinesdata"/>
         </RelativeLayout>
         <TextView
             android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Activite 1"
+                android:hint="Capital social en letters"
                 android:id="@+id/Activities_menees"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -125,18 +125,16 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <Spinner
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Activite 2 optional"
+                android:entries="@array/numaraire"
                 android:id="@+id/principle"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:textColor="#7C6A6A"
-                android:textColorHint="#7C6A6A"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
         <LinearLayout
@@ -150,7 +148,7 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Activite 3 optinel"
+                android:hint="Valeur total de l'apport en nature"
                 android:id="@+id/secondaire_facultatif"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -169,7 +167,7 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Activite 4: optionnel"
+                android:hint="Valeur total en lettres de I'apport en nature"
                 android:id="@+id/Datedenaissance"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
@@ -201,7 +199,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginBottom="@dimen/_25sdp"
-                android:layout_marginRight="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_weight="1"
                 android:background="#3894a5"

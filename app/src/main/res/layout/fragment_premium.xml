@@ -13,7 +13,7 @@
         android:layout_height="@dimen/_100sdp"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/_30sdp"
-        android:src="@drawable/ic_profile"
+        android:src="@drawable/ourpackages"
         android:id="@+id/Pre_img"/>
     <androidx.cardview.widget.CardView
         android:layout_width="@dimen/_280sdp"
@@ -30,8 +30,8 @@
             android:layout_height="@dimen/_130sdp">
             <ImageView
                 android:layout_width="@dimen/_80sdp"
-                android:src="@drawable/ic_profile"
-                android:id="@+id/Pre_imge"
+                android:src="@drawable/basicpack"
+                android:id="@+id/Pre_imges"
                 android:background="@drawable/pre_background"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_10sdp"
@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             android:id="@+id/Pre_Basic_Package"
-            android:layout_toRightOf="@+id/Pre_imge"
+            android:layout_toRightOf="@+id/Pre_imges"
             android:textColor="#FFF"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
@@ -84,7 +84,7 @@
             android:layout_height="@dimen/_130sdp">
             <ImageView
                 android:layout_width="@dimen/_80sdp"
-                android:src="@drawable/ic_profile"
+                android:src="@drawable/advancepack"
                 android:id="@+id/Pre_imge"
                 android:background="@drawable/pre_background"
                 android:layout_marginLeft="@dimen/_20sdp"
@@ -138,7 +138,7 @@
             android:layout_height="@dimen/_130sdp">
             <ImageView
                 android:layout_width="@dimen/_80sdp"
-                android:src="@drawable/ic_profile"
+                android:src="@drawable/vipack"
                 android:id="@+id/Pre_imge"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:background="@drawable/pre_background"

@@ -26,13 +26,11 @@
                 android:padding="@dimen/_5sdp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_baseline_arrow_back_24"/>
-            <ImageView
-                android:layout_width="@dimen/_120sdp"
-                android:layout_height="@dimen/_120sdp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textSize="@dimen/_15sdp"
-                android:id="@+id/R_Profileimage"
-                android:src="@drawable/ic_baseline_person_24"
-                android:padding="@dimen/_10sdp"
+                android:padding="@dimen/_5sdp"
                 android:textColor="#000"
                 android:layout_centerHorizontal="true"
                 android:text="Register"/>
@@ -66,7 +64,7 @@
             android:layout_marginTop="@dimen/_25sdp"
             android:textColor="#7C6A6A"
             android:textColorHint="#7C6A6A"
-            android:hint="nom de Famille"
+            android:hint="nom de famille"
             android:layout_height="52dp"/>
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="360dp"
@@ -81,7 +79,7 @@
             android:layout_marginTop="@dimen/_25sdp"
             android:textColor="#7C6A6A"
             android:textColorHint="#7C6A6A"
-            android:hint="É-mail"
+            android:hint="Adresse e-mail"
             android:layout_height="52dp"/>
 
         <com.google.android.material.textfield.TextInputEditText
@@ -124,34 +122,34 @@
             android:layout_marginRight="@dimen/_20sdp"
             android:background="@drawable/rectangle_2"
             android:padding="@dimen/_10sdp"
-            android:id="@+id/R_Date_de_naissance"
+            android:id="@+id/R_Adresse"
             android:textSize="@dimen/_12sdp"
             android:fontFamily="@font/lateefregular"
             android:layout_marginTop="@dimen/_25sdp"
             android:textColor="#7C6A6A"
             android:textColorHint="#7C6A6A"
-            android:hint="Date de naissance"
+            android:hint="Adresse"
             android:layout_height="52dp"/>
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="360dp"
-            android:layout_below="@+id/R_Date_de_naissance"
+            android:layout_below="@+id/R_Adresse"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_20sdp"
             android:background="@drawable/rectangle_2"
             android:padding="@dimen/_10sdp"
             android:fontFamily="@font/lateefregular"
-            android:id="@+id/R_lieu_de_naissance"
+            android:id="@+id/R_Date_de_naissance"
             android:textSize="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_25sdp"
             android:textColor="#7C6A6A"
             android:textColorHint="#7C6A6A"
-            android:hint="lieu de naissance"
+            android:hint="Date de naissance"
             android:layout_height="52dp"/>
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="360dp"
-            android:layout_below="@+id/R_lieu_de_naissance"
+            android:layout_below="@+id/R_Date_de_naissance"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_20sdp"
             android:background="@drawable/rectangle_2"
@@ -163,22 +161,6 @@
             android:textColor="#7C6A6A"
             android:textColorHint="#7C6A6A"
             android:hint="Citoyenneté"
-            android:layout_height="52dp"/>
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="360dp"
-            android:layout_below="@+id/R_Citoyenneté"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_20sdp"
-            android:background="@drawable/rectangle_2"
-            android:padding="@dimen/_10sdp"
-            android:fontFamily="@font/lateefregular"
-            android:id="@+id/R_adresse"
-            android:textSize="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:textColor="#7C6A6A"
-            android:textColorHint="#7C6A6A"
-            android:hint="adresse"
             android:layout_height="52dp"/>
 
 
@@ -198,39 +180,8 @@
             android:layout_marginBottom="30dp"
             android:padding="@dimen/_7sdp"
             android:layout_height="52dp"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:id="@+id/linear1"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:layout_below="@+id/R_Sinscrire_maintenant"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Vous avez déjà un compte"
-                android:textSize="@dimen/_15sdp"
-                android:fontFamily="@font/lateefregular"
-                android:textStyle="bold"
-                android:textColor="#2E1D1D"
-                android:id="@+id/arhacc"
-                android:padding="@dimen/_5sdp"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Connexion"
-                android:fontFamily="@font/lateefregular"
-                android:textSize="@dimen/_15sdp"
-                android:textStyle="bold"
-                android:id="@+id/R_Connexion"
-                android:layout_toRightOf="@+id/arhacc"
-                android:textColor="#ff8f47"
-                android:padding="@dimen/_5sdp"
-                android:layout_height="wrap_content"/>
-        </RelativeLayout>
-
     </RelativeLayout>
 </ScrollView>
+
+
+

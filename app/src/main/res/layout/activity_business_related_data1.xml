@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/p_image"
                 android:layout_height="@dimen/_150sdp"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/bussinesdata"/>
         </RelativeLayout>
        <TextView
             android:layout_width="match_parent"

@@ -43,7 +43,7 @@
                 android:layout_height="@dimen/_100sdp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/ic_home"
+                android:src="@drawable/basicpack"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
                 android:textSize="@dimen/_20sdp"
                 android:fontFamily="@font/lateefregular"
                 android:textStyle="bold"
-                android:textColor="#3894a5"
+                android:textColor="#ff8f47"
                 />
             <TextView
                 android:layout_width="match_parent"
