@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        login = findViewById(R.id.login);
+        login = findViewById(R.id.L_connexion);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

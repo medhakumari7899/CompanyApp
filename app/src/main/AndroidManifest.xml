@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CompanyApp">
-        <activity android:name=".RegisterActivity.SignupActivity"></activity>
+        <activity android:name=".UserDetailsForm.IncorporationRelatedData"></activity>
+        <activity android:name=".UserDetailsForm.BussinessRelatedData3" />
+        <activity android:name=".RegisterActivity.SignupActivity" />
         <activity android:name=".UserDetailsForm.BussinessRelatedData2" />
         <activity android:name=".UserDetailsForm.DataCollectForms2" />
         <activity android:name=".UserDetailsForm.DataCollectForms" />

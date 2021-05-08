@@ -31,8 +31,25 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/p_image"
                 android:layout_height="@dimen/_150sdp"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/bussinesdata"/>
         </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Localisation de I'enterprise"
+            android:textColor="#ff8f47"
+            android:gravity="center"
+            android:textSize="@dimen/_15sdp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Addresse dev l'enterprise"
+            android:textColor="#000"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:textSize="@dimen/_10sdp"
+            />
 
 
         <LinearLayout
@@ -46,8 +63,8 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Nombre d'employees prevus"
-                android:id="@+id/Nombred_employees_prevus"
+                android:hint="Rue(optionnelle)"
+                android:id="@+id/Date"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="#7C6A6A"
@@ -65,8 +82,8 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Transport"
-                android:id="@+id/Transport"
+                android:hint="Porte (optionnelle)"
+                android:id="@+id/Nom_commercial_de_i_enterprise"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -84,8 +101,28 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="BTP"
-                android:id="@+id/btp"
+                android:hint="Parcelle"
+                android:id="@+id/Single_facultatif"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Lot"
+                android:id="@+id/Activities_menees"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -103,8 +140,28 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Commerce"
-                android:id="@+id/Commerce"
+                android:hint="Section"
+                android:id="@+id/Section"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Secteur"
+                android:id="@+id/secondaire_facultatif"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -122,8 +179,8 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="SCRM"
-                android:id="@+id/Scrm"
+                android:hint="Bp"
+                android:id="@+id/Datedenaissance"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -141,27 +198,46 @@
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Autres a preciser"
-                android:id="@+id/Autresa_preciser"
+                android:hint="Tel"
+                android:id="@+id/Tel"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
                 android:textColorHint="#7C6A6A"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
-        <Button
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_25sdp"
-            android:layout_marginBottom="@dimen/_25sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:background="#3894a5"
-            android:id="@+id/submite"
-            android:layout_marginRight="@dimen/_25sdp"
-            android:text="Submite"
-            />
+            android:weightSum="2"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#3894a5"
+                android:layout_weight="1"
+                android:id="@+id/pevious"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:text="Previous"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="#3894a5"
+                android:id="@+id/next"
+                android:text="Next"
+                />
 
-
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
