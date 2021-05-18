@@ -1,4 +1,4 @@
-package com.example.companyapp.UserDetailsForm;
+package com.example.companyapp.FormActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.companyapp.R;
 
-public class BussinessRelatedData3 extends AppCompatActivity {
+public class AgentCafore extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bussiness_related_data3);
+        setContentView(R.layout.activity_agent_cafore);
     }
 }

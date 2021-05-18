@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/p_image"
                 android:layout_height="@dimen/_150sdp"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/datacolaction"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -39,6 +39,13 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
+            <TextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="@color/purple_200"
+                android:textSize="@dimen/_20sdp"
+                android:layout_height="wrap_content"
+                android:text="données personnelles "/>
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
@@ -46,7 +53,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Secteur de résidence"
-                android:id="@+id/Date"
+                android:id="@+id/residencesector"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="#7C6A6A"
@@ -65,7 +72,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Ville de résidence"
-                android:id="@+id/Nom_commercial_de_i_enterprise"
+                android:id="@+id/placeofresidence"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -84,7 +91,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Pays de résidence "
-                android:id="@+id/Single_facultatif"
+                android:id="@+id/countryofresidence"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -103,7 +110,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Profession"
-                android:id="@+id/Activities_menees"
+                android:id="@+id/profession"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -122,7 +129,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="N CNIB ou Passeport"
-                android:id="@+id/principle"
+                android:id="@+id/idpassportno"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -141,7 +148,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Date d'établissement"
-                android:id="@+id/secondaire_facultatif"
+                android:id="@+id/issuedate"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -160,7 +167,7 @@
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Déilvré par"
-                android:id="@+id/Datedenaissance"
+                android:id="@+id/issueauthority"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -181,7 +188,7 @@
                android:layout_marginTop="@dimen/_10sdp"
                android:background="#3894a5"
                android:layout_weight="1"
-               android:id="@+id/pevious"
+               android:id="@+id/datacollect_pevious"
                android:layout_marginRight="@dimen/_25sdp"
                android:text="Previous"
                />
@@ -193,7 +200,7 @@
                android:layout_marginTop="@dimen/_10sdp"
                android:layout_weight="1"
                android:background="#3894a5"
-               android:id="@+id/next"
+               android:id="@+id/datacollect_next"
                android:text="Next"
                />
 

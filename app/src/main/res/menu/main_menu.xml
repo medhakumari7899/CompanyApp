@@ -3,14 +3,14 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_premium"
-        android:title="Home" />
+        android:title="Adhésion" />
 
     <item
         android:id="@+id/premium"
-        android:icon="@drawable/ic_home"
-        android:title="Premium" />
+        android:icon="@drawable/ic_baseline_download_for_offline_24"
+        android:title="Télécharger" />
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_person"
-        android:title="Profile" />
+        android:title="Profil" />
 </menu>

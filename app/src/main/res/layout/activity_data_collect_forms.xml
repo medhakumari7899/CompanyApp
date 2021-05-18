@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/p_image"
                 android:layout_height="@dimen/_150sdp"
-                android:src="@drawable/ic_profile"/>
+                android:src="@drawable/datacolaction"/>
         </RelativeLayout>
         <TextView
             android:layout_width="match_parent"
@@ -48,14 +48,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="M./Mme/Mlle"
-                android:id="@+id/Date"
+                android:id="@+id/nametitle"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="#7C6A6A"
@@ -67,14 +67,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Prénom"
-                android:id="@+id/Nom_commercial_de_i_enterprise"
+                android:id="@+id/firstname"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -86,14 +86,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Autre(s)Prénoms(s)"
-                android:id="@+id/Single_facultatif"
+                android:id="@+id/middlename"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -105,14 +105,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nom"
-                android:id="@+id/Activities_menees"
+                android:id="@+id/lastname"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -124,14 +124,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nom du pére"
-                android:id="@+id/principle"
+                android:id="@+id/fathername"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -143,14 +143,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nom de la mére"
-                android:id="@+id/secondaire_facultatif"
+                android:id="@+id/mothername"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -162,14 +162,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Date de naissance"
-                android:id="@+id/Datedenaissance"
+                android:id="@+id/dob"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -181,14 +181,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Lieu de naissance"
-                android:id="@+id/Lieudenaissance"
+                android:id="@+id/placeofbirth"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -200,14 +200,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nationalité"
-                android:id="@+id/Address"
+                android:id="@+id/citizenship"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"

@@ -31,7 +31,7 @@
                 android:layout_centerHorizontal="true"
                 android:id="@+id/p_image"
                 android:layout_height="@dimen/_150sdp"
-                android:src="@drawable/bussinesdata"/>
+                android:src="@drawable/bussindesata"/>
         </RelativeLayout>
        <TextView
             android:layout_width="match_parent"
@@ -48,14 +48,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nom de l'entreprise"
-                android:id="@+id/Date"
+                android:id="@+id/companyname"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="#7C6A6A"
@@ -67,14 +67,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nom commercial"
-                android:id="@+id/Nom_commercial_de_i_enterprise"
+                android:id="@+id/commercialname"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -86,14 +86,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Nom abrege ou acronyme"
-                android:id="@+id/Single_facultatif"
+                android:id="@+id/acronym"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -113,14 +113,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
-                android:hint="Activite 1"
-                android:id="@+id/Activities_menees"
+                android:hint="Activite1"
+                android:id="@+id/businessactivity"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -132,14 +132,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Activite 2 optional"
-                android:id="@+id/principle"
+                android:id="@+id/businessactivity2"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -151,14 +151,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Activite 3 optinel"
-                android:id="@+id/secondaire_facultatif"
+                android:id="@+id/businessactivity3"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -170,14 +170,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             >
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginRight="@dimen/_20sdp"
                 android:background="@drawable/background_set"
                 android:padding="@dimen/_10sdp"
                 android:hint="Activite 4: optionnel"
-                android:id="@+id/Datedenaissance"
+                android:id="@+id/businessactivity4"
                 android:textSize="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:textColor="#7C6A6A"
@@ -199,9 +199,9 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="#3894a5"
                 android:layout_weight="1"
-                android:id="@+id/pevious"
+                android:id="@+id/previous1"
                 android:layout_marginRight="@dimen/_25sdp"
-                android:text="Previous"
+                android:text="précédent"
                 />
             <Button
                 android:layout_width="wrap_content"
@@ -211,8 +211,8 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_weight="1"
                 android:background="#3894a5"
-                android:id="@+id/next"
-                android:text="Next"
+                android:id="@+id/next1"
+                android:text="suivante"
                 />
 
         </LinearLayout>

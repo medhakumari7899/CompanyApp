@@ -4,11 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 
@@ -25,6 +22,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     TextView textView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         BottomNavigationView navigation = findViewById(R.id.bottomnavigation);
         navigation.setOnNavigationItemSelectedListener(this);
-        loadFragment(new HomeFragement());
+        loadFragment(new ProfileFragment());
 
 
     }

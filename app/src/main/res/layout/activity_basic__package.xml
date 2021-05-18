@@ -48,18 +48,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Basic Package"
+                android:text="Pack Document"
                android:gravity="center"
                 android:textSize="@dimen/_20sdp"
                 android:fontFamily="@font/lateefregular"
                 android:textStyle="bold"
-                android:textColor="#ff8f47"
+                android:textColor="@color/purple_200"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15sdp"
-                android:text=" Documents generated Based on data provided"
+                android:text=" Document généré sur la base des données fournies"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Storage Facility"
+                android:text=" facilité de stockage"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -83,7 +83,7 @@
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_50sdp"
-                android:text="Buy Now"
+                android:text="Acheter maintenant"
                 />
 
 

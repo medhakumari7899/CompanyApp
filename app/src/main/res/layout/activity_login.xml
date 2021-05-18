@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,7 +17,7 @@
         >
        <TextView
            android:layout_width="match_parent"
-           android:layout_marginTop="@dimen/_15sdp"
+           android:layout_marginTop="@dimen/_20sdp"
            android:layout_height="wrap_content"
            android:text="Bienvenue à QwickStartup"
            android:layout_marginLeft="@dimen/_25sdp"
@@ -115,16 +114,18 @@
         app:cardBackgroundColor="@color/purple_200"
         android:layout_below="@id/L_Mot_de_passe"
         android:id="@+id/L_connexion">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:text="L_connexion"
-            android:layout_gravity="center"
             android:id="@+id/tvLogin"
-            android:textStyle="bold"
-            android:padding="@dimen/_5sdp"
-            android:textSize="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/lateefregular"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_6sdp"
+            android:text="Se connexion"
             android:textColor="#FFF"
-            android:layout_height="wrap_content"/>
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
     </androidx.cardview.widget.CardView>
 
     <RelativeLayout
@@ -180,7 +181,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:text="S'inscrire"
+            android:text="Inscrivez-Vous"
             android:fontFamily="@font/lateefregular"
             android:textSize="@dimen/_15sdp"
             android:textStyle="bold"
@@ -190,11 +191,8 @@
             android:padding="@dimen/_5sdp"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
-
-
-
 </RelativeLayout>
-</layout>
+
 
 
 

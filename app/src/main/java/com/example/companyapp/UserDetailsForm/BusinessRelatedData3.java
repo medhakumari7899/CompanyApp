@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.companyapp.R;
 
-public class DataCollectForms2 extends AppCompatActivity {
+public class BusinessRelatedData3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_data_collect_forms2);
+        setContentView(R.layout.activity_business_related_data3);
     }
 }

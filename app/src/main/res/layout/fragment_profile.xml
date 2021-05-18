@@ -1,318 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="@dimen/_600sdp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:forceDarkAllowed="false"
-    tools:context=".Fragement.ProfileFragment">
+    android:background="@drawable/ic_splash"
+    android:layout_height="match_parent"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#039de7"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rl"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="wrap_content">
 
-        android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:id="@+id/backarrow"
+                android:padding="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_marginStart="@dimen/_20sdp" />
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/p_image"
+                android:layout_height="@dimen/_150sdp"
+                android:src="@drawable/ic_profile"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Données personnelles"
+            android:textColor="#ff8f47"
+            android:gravity="center"
+            android:textSize="@dimen/_15sdp"
+            />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_image"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_110sdp"
-            android:layout_marginLeft="@dimen/_15sdp"
-            app:civ_border_color="#fff"
-            app:civ_border_width="2dp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:src="@drawable/ic_baseline_person_24"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="@dimen/_5sdp"
-            android:layout_marginLeft="@dimen/_15sdp"
-            android:layout_gravity="center">
-
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/lateefregular"
-                android:text="Name"
-                android:textColor="#FFFFFF"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_email"
-                android:text="Email Address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/_12sdp"
-                android:maxLines="1"
-                android:textColor="#FFFFFF"/>
-
-
-
-            <TextView
-                android:id="@+id/tv_phNumber"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/_12sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:text="Phone number"
-                android:textColor="#FFFFFF"/>
-
-
-
-            <LinearLayout
+            >
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_6sdp"
-                android:orientation="horizontal">
-
-
-                <ImageView
-                    android:id="@+id/tvEditProfile"
-                    android:layout_width="@dimen/_20sdp"
-                    android:visibility="visible"
-                    android:layout_height="@dimen/_25sdp"
-                    app:srcCompat="@drawable/ic_baseline_edit_24"
-                    android:layout_marginLeft="@dimen/_100sdp"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:layout_gravity="end"
-                    app:tint="#fff">
-
-
-
-
-
-                </ImageView>
-
-
-            </LinearLayout>
-
-
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="M./Mme/Mlle"
+                android:id="@+id/Date"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Prénom"
+                android:id="@+id/Nom_commercial_de_i_enterprise"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Autre(s)Prénoms(s)"
+                android:id="@+id/Single_facultatif"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Nom"
+                android:id="@+id/Activities_menees"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Nom du pére"
+                android:id="@+id/principle"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Nom de la mére"
+                android:id="@+id/secondaire_facultatif"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Date de naissance"
+                android:id="@+id/Datedenaissance"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Lieu de naissance"
+                android:id="@+id/Lieudenaissance"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/background_set"
+                android:padding="@dimen/_10sdp"
+                android:hint="Nationalité"
+                android:id="@+id/Address"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="#7C6A6A"
+                android:textColorHint="#7C6A6A"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#ff8f47"
+            android:id="@+id/step2"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:text="Next"
+            />
+
 
 
     </LinearLayout>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/set_invite"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_12sdp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:padding="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_4sdp"
-                app:srcCompat="@drawable/ic_baseline_group_24"
-                app:tint="#039de7" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="left"
-                android:paddingLeft="@dimen/_10sdp"
-                android:text="Invite friends to company"
-                android:textSize="@dimen/_12sdp"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#039de7"
-                android:drawablePadding="@dimen/_10sdp"
-                android:textColor="#039de7" />
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/set_setting"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:padding="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_4sdp"
-                app:srcCompat="@drawable/ic_baseline_edit_24"
-                app:tint="#039de7" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#039de7"
-                android:gravity="left"
-                android:paddingLeft="@dimen/_10sdp"
-                android:textColor="#039de7"
-                android:textSize="@dimen/_12sdp"
-                android:text="Edit Profile"/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/helpSupport"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_12sdp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:padding="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_4sdp"
-                app:srcCompat="@drawable/ic_help"
-                app:tint="#039de7"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#039de7"
-                android:gravity="left"
-                android:paddingLeft="10dp"
-                android:textColor="#039de7"
-                android:textSize="@dimen/_12sdp"
-                android:text="Help and Support" />
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/set_policy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_12sdp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:padding="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff"/>
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/set_changepass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="visible"
-        app:cardCornerRadius="@dimen/_12sdp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:padding="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_4sdp"
-                android:src="@drawable/ic_baseline_vpn_key_24"
-                app:tint="#039de7" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="left"
-                android:paddingLeft="@dimen/_10sdp"
-                android:text="Change Password"
-                android:textSize="@dimen/_12sdp"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#039de7"
-                android:textColor="#039de7" />
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/set_logout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_12sdp"
-        android:layout_marginHorizontal="@dimen/_5sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:padding="@dimen/_15sdp"
-        app:cardElevation="@dimen/_5sdp"
-        app:cardBackgroundColor="#fff">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_5sdp">
-
-            <ImageView
-                android:layout_width="@dimen/_30sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_5sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_4sdp"
-                android:src="@drawable/ic_logout"
-                app:tint="#039de7" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="left"
-                android:paddingLeft="@dimen/_10sdp"
-                android:text="Logout"
-                android:textSize="@dimen/_12sdp"
-                android:drawableRight="@drawable/ic_right_arrow"
-                android:drawableTint="#039de7"
-                android:textColor="#039de7" />
-
-
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
+</ScrollView>

@@ -25,7 +25,7 @@
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_400sdp"
+        android:layout_height="@dimen/_450sdp"
         android:layout_marginLeft="@dimen/_15sdp"
         android:layout_marginRight="@dimen/_15sdp"
         android:layout_gravity="center"
@@ -39,27 +39,27 @@
             android:orientation="vertical"
             >
             <ImageView
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/vipack"
+                android:src="@drawable/viopack"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vip Package"
+                android:text="Pack VIP"
                 android:gravity="center"
                 android:textSize="@dimen/_20sdp"
                 android:fontFamily="@font/lateefregular"
                 android:textStyle="bold"
-                android:textColor="#ff8f47"
+                android:textColor="@color/purple_200"
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:text=" Advanced Package"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text=" Forfait avancé"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -70,7 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Conicarge Service for additional documents"
+                android:text="Service de conciergerie pour les documents supplémentaires"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Documents genrated based on data provided "
+                android:text="Document généré sur la base des données fournies "
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -100,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Company House issued documents"
+                android:text="La maison de la société a émis des documents"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -110,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Incorporation Service"
+                android:text="Service d'incorporation"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -120,7 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:text="Business Stamp for the Company Newl"
+                android:text="Timbre commercial pour la société nouvellement créée"
                 android:drawableLeft="@drawable/ic_rightarrow"
                 android:layout_marginLeft="@dimen/_15sdp"
                 android:textSize="@dimen/_12sdp"
@@ -133,7 +133,7 @@
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:text="Buy Now"
+                android:text="Acheter maintenant"
                 />
 
 

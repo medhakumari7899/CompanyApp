@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class  usermodel {
      String firstname,lastname,email,password,phone,dob,placeofbirth,citizenship,address,
             image;
-     @SerializedName("status")
+     @SerializedName("token")
      private String status;
      @SerializedName("result_code")
      private int resultCode;

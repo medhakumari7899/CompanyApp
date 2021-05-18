@@ -4,11 +4,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="facebook_app_id">173892924615430</string>
     <string name="fb_login_protocol_scheme">fb173892924615430</string>
-    <string-array name="numaraire">
-        <item>numéraire</item>
-        <item>apport en nature</item>
 
-    </string-array>
+
+    <string name="err_firstname">The name field is required.</string>
+    <string name="err_lastname">The name field is required.</string>
+    <string name="err_email">The email must be a valid email address.</string>
+    <string name="err_password">The password must be at least 6 characters.</string>
+    <string name="err_dob">The name field is required.</string>
+    <string name="err_placeofbirth">The name field is required.</string>
+    <string name="err_citizenship">The name field is required.</string>
+    <string name="err_phone">The name field is required.</string>
+    <string name="err_address">The name field is required.</string>
 
 
 </resources>
