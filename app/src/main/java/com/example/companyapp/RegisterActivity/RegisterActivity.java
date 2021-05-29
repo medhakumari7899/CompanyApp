@@ -2,39 +2,25 @@ package com.example.companyapp.RegisterActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.companyapp.Activity.MainActivity;
-import com.example.companyapp.ApiError;
 import com.example.companyapp.Model.RegisterRequest;
 import com.example.companyapp.Model.RegisterResponse;
 import com.example.companyapp.R;
-import com.example.companyapp.RetrofitBuilder;
-import com.example.companyapp.SessionManager;
-import com.example.companyapp.Utils;
-import com.example.companyapp.entities.AccessToken;
 import com.example.companyapp.network.ApiService;
-import com.example.companyapp.network.TokenManager;
 import com.example.companyapp.sevice.ApiClient;
 
-import java.util.List;
-import java.util.Map;
-
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.http.Body;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -43,12 +29,8 @@ public class RegisterActivity extends AppCompatActivity {
     ProgressDialog loadingBar;
     Button button;
     EditText etfirstname,etlastname,etemail,etpassword,etphone,etdob,etplaceofbirth,etcitizenship,etaddress;
-//    Call<AccessToken> call;
     ApiService service;
-    SessionManager sessionManager;
-    String sendToken;
-//    TokenManager tokenManager;
-//
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +47,8 @@ public class RegisterActivity extends AppCompatActivity {
         etaddress=findViewById(R.id.R_Adresse);
         loadingBar = new ProgressDialog(RegisterActivity.this);
         button = findViewById(R.id.R_Sinscrire_maintenant);
-        service = RetrofitBuilder.createService(ApiService.class);
-        sessionManager = SessionManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
+//        service = RetrofitBuilder.createService(ApiService.class);
+//        sessionManager = SessionManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
 
 //        if(tokenManager.getToken().getAccessToken() != null){
 //            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
@@ -102,7 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                    registerRequest.setPlaceofbirth(etplaceofbirth.getText().toString());
                    registerRequest.setCitizenship(etcitizenship.getText().toString());
                    registerRequest.setAddress(etaddress.getText().toString());
-                   registerUsers(registerRequest,registerResponse);
+                   registerUsers(registerRequest);
 
 
                }
@@ -111,16 +93,15 @@ public class RegisterActivity extends AppCompatActivity {
        });
     }
 
-    private void registerUsers(RegisterRequest registerRequest,RegisterResponse registerResponse) {
+    private void registerUsers(RegisterRequest registerRequest) {
 
 
-        Call<RegisterResponse> registerResponseCall= ApiClient.getService().registerUser( sendToken,registerRequest);
+        Call<RegisterResponse> registerResponseCall= ApiClient.getService().registerUser( registerRequest);
         registerResponseCall.enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-//                Log.w(TAG, "onResponse: " + response);
+                Log.w(TAG, "onResponse: " + response);
                 if (response.isSuccessful()){
-                    sessionManager.saveAuthToken(registerResponse.getAuthToken());
                     Log.w(TAG, "onResponse: " + response.body() );
                     String message=" Register Successful ,please verify your email..";
                     Toast.makeText(RegisterActivity.this,message, Toast.LENGTH_SHORT).show();

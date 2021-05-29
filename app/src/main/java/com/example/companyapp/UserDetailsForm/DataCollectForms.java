@@ -11,14 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.companyapp.Model.RegisterRequest;
+import com.example.companyapp.MyApiConnect.MySessionManager;
 import com.example.companyapp.R;
-import com.example.companyapp.RegisterActivity.LoginActivity;
-import com.example.companyapp.RegisterActivity.RegisterActivity;
 import com.example.companyapp.RetrofitBuilder;
 import com.example.companyapp.SessionManager;
 import com.example.companyapp.network.ApiService;
-import com.example.companyapp.sevice.ApiClient;
 import com.example.companyapp.sevice.DataCollectFormsRequest;
 import com.example.companyapp.sevice.DataCollectFormsResponce;
 
@@ -28,20 +25,29 @@ import retrofit2.Response;
 
 public class DataCollectForms extends AppCompatActivity {
     ApiService service;
-    SessionManager sessionManager;
+   SessionManager sessionManager;
 
     private static final String TAG = "DataCollectForms";
     EditText etnametitle,etfirstname,etmiddlename,etlastname,etfathername,
              etmothername,etdob,etplaceofbirth,etcitizenship;
     Button btnnext;
+    String authtoken,token;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_collect_forms);
-        service = RetrofitBuilder.createService(ApiService.class);
-        sessionManager = SessionManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
+        Intent intent=getIntent();
+        token=intent.getStringExtra("token");
+//        if(sessionManager.getToken().getAccessToken() != null){
+//            startActivity(new Intent(DataCollectForms.this, DataCollectForms1.class));
+//            finish();
+//        }
+
+
+        sessionManager= sessionManager.getInstance(getSharedPreferences("prefs",MODE_PRIVATE));
+        service = RetrofitBuilder.createServiceWithAuth(ApiService.class,sessionManager);
 
         etnametitle=findViewById(R.id.nametitle);
         etfirstname=findViewById(R.id.firstname);
@@ -85,15 +91,25 @@ public class DataCollectForms extends AppCompatActivity {
         });
     }
 
+    boolean isFIrstTIme=false;
+
     private void dataformsUsers(DataCollectFormsRequest dataCollectFormsRequest) {
-        Call<DataCollectFormsResponce> dataCollectFormsResponceCall= ApiClient.getService().datacollectform( dataCollectFormsRequest);
+        if (isFIrstTIme){
+            return;
+        }
+        isFIrstTIme=true;
+        sessionManager.fetchAuthToken(DataCollectFormsResponce.getAuthToken());
+
+        Call<DataCollectFormsResponce> dataCollectFormsResponceCall= service.datacollectform(dataCollectFormsRequest);
         dataCollectFormsResponceCall.enqueue(new Callback<DataCollectFormsResponce>() {
             @Override
             public void onResponse(Call<DataCollectFormsResponce> call, Response<DataCollectFormsResponce> response) {
                 Log.w(TAG, "onResponse: " + response);
+                authtoken = response.headers().get("Authtoken");
 
                 if (response.isSuccessful()){
-                    sessionManager.saveAuthToken(DataCollectFormsResponce.getAuthToken());
+
+//                    tokenManager.saveToken(DataCollectFormsResponce.getAuthToken());
                     Log.w(TAG, "onResponse: " + response.body() );
                     String message=" Register Successful ,please verify your email..";
                     Toast.makeText(DataCollectForms.this,message, Toast.LENGTH_SHORT).show();
@@ -116,4 +132,6 @@ public class DataCollectForms extends AppCompatActivity {
             }
         });
     }
+
+
 }

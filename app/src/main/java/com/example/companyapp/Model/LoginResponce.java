@@ -1,17 +1,24 @@
 package com.example.companyapp.Model;
 
+import com.example.companyapp.entities.AccessToken;
 import com.google.gson.annotations.SerializedName;
-
-import java.io.Serializable;
 
 public class LoginResponce   {
 
    @SerializedName("status_code")
     int statuscode;
-   @SerializedName("auth_token")
+   @SerializedName("token")
     String authToken;
    @SerializedName("register_request")
     RegisterRequest registerRequest;
+
+    public String getAuthToken() {
+        return authToken;
+    }
+
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
+    }
 
     public int getStatuscode() {
         return statuscode;
@@ -21,13 +28,6 @@ public class LoginResponce   {
         this.statuscode = statuscode;
     }
 
-    public String getAuthToken() {
-        return authToken;
-    }
-
-    public void setAuthToken(String authToken) {
-        this.authToken = authToken;
-    }
 
     public RegisterRequest getRegisterRequest() {
         return registerRequest;

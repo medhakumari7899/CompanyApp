@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -13,18 +12,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.companyapp.Model.RegisterRequest;
+import com.example.companyapp.MyApiConnect.AuthenticationInterceptor;
+import com.example.companyapp.MyApiConnect.MyApiClient;
+import com.example.companyapp.MyApiConnect.MySessionManager;
 import com.example.companyapp.R;
 import com.example.companyapp.RegisterActivity.LoginActivity;
-import com.example.companyapp.RegisterActivity.RegisterActivity;
 import com.example.companyapp.RetrofitBuilder;
 import com.example.companyapp.SessionManager;
 import com.example.companyapp.network.ApiService;
 import com.example.companyapp.sevice.ApiClient;
 import com.example.companyapp.sevice.BusinessRelatedData1Request;
 import com.example.companyapp.sevice.BusinessRelatedData1Response;
-import com.example.companyapp.sevice.DataCollectFormsResponce;
-import com.google.android.material.textfield.TextInputEditText;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,25 +33,40 @@ public class BusinessRelatedData1 extends AppCompatActivity {
 
     ProgressDialog loadingBar;
     ApiService service;
+    Call<BusinessRelatedData1Response> call;
+
     SessionManager sessionManager;
     ApiClient apiClient;
-    private String sendToken;
-    private String retrivedToken;
-    private SharedPreferences prefs;
-    public static final String MyPREFERENCES = "myprefs";
-    public static final  String value = "key";
-
+    private String authtoken;
+    TokenManager tokenManager;
     EditText companyname,commercialname,acronym,businessactivity,businessactivity2,businessactivity3
             ,businessactivity4;
     Button next1,previous1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_business_related_data1);
         companyname =findViewById(R.id.companyname);
-        service = RetrofitBuilder.createService(ApiService.class);
-        sessionManager = SessionManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
+        tokenManager = TokenManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
+
+        if(tokenManager.getToken() == null){
+            startActivity(new Intent(BusinessRelatedData1.this, LoginActivity.class));
+            finish();
+        }
+
+        service = RetrofitBuilder.createServiceWithAuth(ApiService.class, sessionManager);
+
+
+//        if(tokenManager.getToken() == null){
+//           startActivity(new Intent(getApplicationContext(), DataCollectForms1.class));
+//            finish();
+//        }
+//        service = RetrofitBuilder.createServiceWithAuth(ApiService.class,tokenManager);
+//
+//        tokenManager =tokenManager.getInstance(getSharedPreferences("prefs",MODE_PRIVATE));
+////        sessionManager = SessionManager.getInstance(getSharedPreferences("prefs", MODE_PRIVATE));
         commercialname=findViewById(R.id.commercialname);
         acronym=findViewById(R.id.acronym);
         businessactivity=findViewById(R.id.businessactivity);
@@ -95,37 +108,71 @@ public class BusinessRelatedData1 extends AppCompatActivity {
     }
 
     public void businessrelateddata1(BusinessRelatedData1Request businessRelatedData1Request) {
-        Call<BusinessRelatedData1Response> businessRelatedData1ResponseCall= ApiClient.getService().businessrelateddata1( sendToken,businessRelatedData1Request);
-        businessRelatedData1ResponseCall.enqueue(new Callback<BusinessRelatedData1Response>() {
-            @Override
-            public void onResponse(Call<BusinessRelatedData1Response> call, Response<BusinessRelatedData1Response> response) {
-                String token = response.headers().get("Token");
-                if (response.isSuccessful()){
-                    sendToken = token;
-//                    sessionManager.fetchAuthToken(DataCollectFormsResponce.getAuthToken());
+        call=service.businessrelateddata1(businessRelatedData1Request);
+////        Call<BusinessRelatedData1Request> businessRelatedData1RequestCall= service.businessrelateddata1( authtoken,businessRelatedData1Request);
+//        businessRelatedData1RequestCall.enqueue(new Callback<BusinessRelatedData1Request>() {
+//            @Override
+//            public void onResponse(Call<BusinessRelatedData1Request> call, Response<BusinessRelatedData1Request> response) {
+//                String token = response.headers().get("Token");
+//                Log.w(TAG, "onResponse: " + response.body() );
+//
+//                if (response.isSuccessful()){
+//                    token = authtoken;
+////                    sessionManager.fetchAuthToken(DataCollectFormsResponce.getAuthToken());
+//                    Log.w(TAG, "onResponse: " + response.body() );
+//                    String message=" Register Successful ,please verify your email..";
+//                    Toast.makeText(BusinessRelatedData1.this,message, Toast.LENGTH_SHORT).show();
+//                    startActivity(new Intent(BusinessRelatedData1.this, DataCollectForms.class));
+//                    finish();
+//                }
+//                else {
+//                    String message = "An error occurred please try again later ...";
+//                    Toast.makeText(BusinessRelatedData1.this,message,Toast.LENGTH_LONG).show();
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<BusinessRelatedData1Request> call, Throwable t) {
+//                String message = t.getLocalizedMessage();
+//                Toast.makeText(BusinessRelatedData1.this,message,Toast.LENGTH_LONG).show();
+//
+//
+//            }
+//        });
+     call.enqueue(new Callback<BusinessRelatedData1Response>() {
+         @Override
+         public void onResponse(Call<BusinessRelatedData1Response> call, Response<BusinessRelatedData1Response> response) {
+                             if (response.isSuccessful()){
+                                 String token = authtoken;
+//                   TokenManager.fetchAuthToken(DataCollectFormsResponce.getAuthToken());
                     Log.w(TAG, "onResponse: " + response.body() );
                     String message=" Register Successful ,please verify your email..";
                     Toast.makeText(BusinessRelatedData1.this,message, Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(BusinessRelatedData1.this, BusinessRelatedData1.class));
+                    startActivity(new Intent(BusinessRelatedData1.this, DataCollectForms.class));
                     finish();
                 }
                 else {
+
                     String message = "An error occurred please try again later ...";
                     Toast.makeText(BusinessRelatedData1.this,message,Toast.LENGTH_LONG).show();
 
                 }
             }
 
-            @Override
-            public void onFailure(Call<BusinessRelatedData1Response> call, Throwable t) {
-                String message = t.getLocalizedMessage();
-                Toast.makeText(BusinessRelatedData1.this,message,Toast.LENGTH_LONG).show();
 
 
-            }
-        });
+         @Override
+         public void onFailure(Call<BusinessRelatedData1Response> call, Throwable t) {
+                            String message = t.getLocalizedMessage();
+              Toast.makeText(BusinessRelatedData1.this,message,Toast.LENGTH_LONG).show();
 
+
+
+         }
+     });
 
 
     }
+
 }

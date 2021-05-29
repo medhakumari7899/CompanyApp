@@ -1,7 +1,6 @@
 package com.example.companyapp;
 
-import com.example.companyapp.network.TokenManager;
-import com.facebook.stetho.okhttp3.StethoInterceptor;
+import com.example.companyapp.MyApiConnect.MySessionManager;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -20,6 +19,7 @@ public class RetrofitBuilder {
 
  private final static OkHttpClient client = buildClient();
  private final static Retrofit retrofit = buildRetrofit();
+  SessionManager sessionManager;
 
  private static OkHttpClient buildClient(){
   OkHttpClient.Builder builder = new OkHttpClient.Builder()
@@ -40,9 +40,9 @@ public class RetrofitBuilder {
            }
           });
 
-  if(BuildConfig.DEBUG){
-   builder.addNetworkInterceptor(new StethoInterceptor());
-  }
+//  if(BuildConfig.DEBUG){
+//   builder.addNetworkInterceptor(new StethoInterceptor());
+//  }
 
   return builder.build();
 
@@ -60,7 +60,7 @@ public class RetrofitBuilder {
   return retrofit.create(service);
  }
 
- public static <T> T createServiceWithAuth(Class<T> service, final TokenManager tokenManager){
+ public static <T> T createServiceWithAuth(Class<T> service, final SessionManager sessionManager){
 
   OkHttpClient newClient = client.newBuilder().addInterceptor(new Interceptor() {
    @NotNull
@@ -71,13 +71,15 @@ public class RetrofitBuilder {
 
     Request.Builder builder = request.newBuilder();
 
-    if(tokenManager.getToken().getAccessToken() != null){
-     builder.addHeader("Authorization", "Bearer " + tokenManager.getToken().getAccessToken());
+    if(sessionManager.getToken().getAccessToken() != null){
+     builder.addHeader("Authorization",  sessionManager.getToken().getAccessToken());
     }
          request = builder.build();
              return chain.proceed(request);
    }
-  }).authenticator(CustomAuthenticator.getInstance(tokenManager)).build();
+  })
+          .authenticator(CustomAuthenticator.getInstance(sessionManager))
+          .build();
   Retrofit newRetrofit = retrofit.newBuilder().client(newClient).build();
   return newRetrofit.create(service);
 
@@ -86,4 +88,6 @@ public class RetrofitBuilder {
  public static Retrofit getRetrofit() {
   return retrofit;
  }
+
+
 }

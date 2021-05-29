@@ -33,10 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormActivity.DeSondossier" />
-        <activity android:name=".FormActivity.PromoteurActivity" />
-        <activity android:name=".FormActivity.AgentImport" />
-        <activity android:name=".FormActivity.AgentCafore" />
         <activity android:name=".RegisterActivity.LoginActivity" /> <!-- <activity -->
         <!-- android:name="com.facebook.FacebookActivity" -->
         <!-- android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" -->
@@ -61,6 +57,5 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

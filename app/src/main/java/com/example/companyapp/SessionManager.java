@@ -8,6 +8,7 @@ public class SessionManager  {
      private SharedPreferences prefs;
      private SharedPreferences.Editor editor;
      private static SessionManager INSTANCE = null;
+     String Token;
 
 
 
@@ -35,7 +36,16 @@ public class SessionManager  {
      }
 
      public final String fetchAuthToken(String authToken) {
-          return this.prefs.getString("user_token", (String)null);
+          return this.prefs.getString("ACCESS_TOKEN", null);
+     }
+//public String getToken(){
+//     return Token;
+//}
+     public AccessToken getToken(){
+          AccessToken token = new AccessToken();
+          token.setAccessToken(prefs.getString("token", null));
+          token.setRefreshToken(prefs.getString("REFRESH_TOKEN", null));
+          return token;
      }
 
 

@@ -9,7 +9,7 @@ public class AccessToken {
     String tokenType;
     @Json(name = "expires_in")
     int expiresIn;
-    @Json(name = "access_token")
+    @Json(name = "token")
     String accessToken;
     @Json(name = "refresh_token")
     String refreshToken;

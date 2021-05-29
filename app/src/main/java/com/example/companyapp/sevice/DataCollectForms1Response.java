@@ -1,7 +1,11 @@
 package com.example.companyapp.sevice;
 
- public class DataCollectForms1Response {
+import com.google.gson.annotations.SerializedName;
+
+public class DataCollectForms1Response {
+  @SerializedName("residencesector")
   String residencesector;
+  @SerializedName("placeofresidence")
   String placeofresidence;
   String countryofresidence;
   String profession;

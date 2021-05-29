@@ -1,6 +1,6 @@
 package com.example.companyapp.sevice;
 
- public class BusinessRelatedData3Responce {
+public class BusinessRelatedData3Responce {
      String street;
      String door;
      String parcel;

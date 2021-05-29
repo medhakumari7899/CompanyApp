@@ -24,29 +24,30 @@ import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 
 public interface ApiService {
-  @POST("register")
-  Call<RegisterResponse> registerUser(@Header("Authorization") String token,@Body RegisterRequest registerRequest);
+  @POST("user/register")
+  Call<RegisterResponse> registerUser(@Body RegisterRequest registerRequest);
+
+
 
   @POST("company/save")
-  Call<BusinessRelatedData1Response>businessrelateddata1(@Header("Authorization") String token,@Body BusinessRelatedData1Request businessRelatedData1Request);
-  @PATCH("update")
+  Call<BusinessRelatedData1Response>businessrelateddata1(@Body BusinessRelatedData1Request businessRelatedData1Request);
+
+  @PATCH("user/update")
   Call<DataCollectFormsResponce> datacollectform( @Body DataCollectFormsRequest dataCollectFormsRequest);
   @POST("update")
   Call<DataCollectForms1Response> datacollectform1(@Body DataCollectForms1Request dataCollectForms1Request);
 
-  @POST("login")
-  Call<LoginResponce> loginUser(@Header("Authorization") String token,@Body LoginRequest loginRequest);
+  @POST("user/login")
+  Call<LoginResponce> loginUser(@Body LoginRequest loginRequest);
 
-  @POST("social_auth")
-  @FormUrlEncoded
-  Call<AccessToken> socialAuth(@Field("name") String name,
-                               @Field("email") String email,
-                               @Field("provider") String provider,
-                               @Field("provider_user_id") String providerUserId);
-
-  @GET("token")
-  @FormUrlEncoded
-  Call<AccessToken> refresh(@Field("refresh_token") String refreshToken);
+//  @POST("social_auth")
+//  Call<AccessToken> socialAuth(@Field("name") String name,
+//                               @Field("email") String email,
+//                               @Field("provider") String provider,
+//                               @Field("provider_user_id") String providerUserId);
+//
+  @GET("user/token")
+  Call<AccessToken> refresh();
 
   @GET("posts")
   Call<DataCollectFormsResponce> posts();

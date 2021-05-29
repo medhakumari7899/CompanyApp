@@ -1,69 +1,127 @@
 package com.example.companyapp.sevice;
 
- public class BusinessRelatedData1Response {
-     String companyname;
-     String commercialname;
-     String acronym ;
-     String businessactivity;
-     String businessactivity2;
-     String businessactivity3;
-     String businessactivity4;
+import com.google.gson.annotations.SerializedName;
 
+public class BusinessRelatedData1Response {
+    @SerializedName("token")
+    String tokenType;
+    @SerializedName( "expires_in")
+    int expiresIn;
+    @SerializedName("access_token")
+    String accessToken;
+    @SerializedName( "refresh_token")
+    String refreshToken;
 
+    @SerializedName("companyname")
+    String companyname;
+    @SerializedName("commercialname")
+    String commercialname;
+    @SerializedName("acronym")
+    String acronym ;
+    @SerializedName("businessactivity")
+    String businessactivity;
+    @SerializedName("businessactivity2")
+    String businessactivity2;
+    @SerializedName("businessactivity3")
+    String businessactivity3;
+    @SerializedName("businessactivity4")
+    String businessactivity4;
+    @SerializedName("authtoken")
+    String authtoken;
 
-     public String getCompanyname() {
-         return companyname;
-     }
+    public String getTokenType() {
+        return tokenType;
+    }
 
-     public void setCompanyname(String companyname) {
-         this.companyname = companyname;
-     }
+    public void setTokenType(String tokenType) {
+        this.tokenType = tokenType;
+    }
 
-     public String getCommercialname() {
-         return commercialname;
-     }
+    public int getExpiresIn() {
+        return expiresIn;
+    }
 
-     public void setCommercialname(String commercialname) {
-         this.commercialname = commercialname;
-     }
+    public void setExpiresIn(int expiresIn) {
+        this.expiresIn = expiresIn;
+    }
 
-     public String getAcronym() {
-         return acronym;
-     }
+    public String getAccessToken() {
+        return accessToken;
+    }
 
-     public void setAcronym(String acronym) {
-         this.acronym = acronym;
-     }
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
 
-     public String getBusinessactivity() {
-         return businessactivity;
-     }
+    public String getRefreshToken() {
+        return refreshToken;
+    }
 
-     public void setBusinessactivity(String businessactivity) {
-         this.businessactivity = businessactivity;
-     }
+    public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+    }
 
-     public String getBusinessactivity2() {
-         return businessactivity2;
-     }
+    public String getCompanyname() {
+        return companyname;
+    }
 
-     public void setBusinessactivity2(String businessactivity2) {
-         this.businessactivity2 = businessactivity2;
-     }
+    public void setCompanyname(String companyname) {
+        this.companyname = companyname;
+    }
 
-     public String getBusinessactivity3() {
-         return businessactivity3;
-     }
+    public String getCommercialname() {
+        return commercialname;
+    }
 
-     public void setBusinessactivity3(String businessactivity3) {
-         this.businessactivity3 = businessactivity3;
-     }
+    public void setCommercialname(String commercialname) {
+        this.commercialname = commercialname;
+    }
 
-     public String getBusinessactivity4() {
-         return businessactivity4;
-     }
+    public String getAcronym() {
+        return acronym;
+    }
 
-     public void setBusinessactivity4(String businessactivity4) {
-         this.businessactivity4 = businessactivity4;
-     }
- }
+    public void setAcronym(String acronym) {
+        this.acronym = acronym;
+    }
+
+    public String getBusinessactivity() {
+        return businessactivity;
+    }
+
+    public void setBusinessactivity(String businessactivity) {
+        this.businessactivity = businessactivity;
+    }
+
+    public String getBusinessactivity2() {
+        return businessactivity2;
+    }
+
+    public void setBusinessactivity2(String businessactivity2) {
+        this.businessactivity2 = businessactivity2;
+    }
+
+    public String getBusinessactivity3() {
+        return businessactivity3;
+    }
+
+    public void setBusinessactivity3(String businessactivity3) {
+        this.businessactivity3 = businessactivity3;
+    }
+
+    public String getBusinessactivity4() {
+        return businessactivity4;
+    }
+
+    public void setBusinessactivity4(String businessactivity4) {
+        this.businessactivity4 = businessactivity4;
+    }
+
+    public String getAuthtoken() {
+        return authtoken;
+    }
+
+    public void setAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+    }
+}
